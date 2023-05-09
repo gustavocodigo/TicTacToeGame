@@ -92,6 +92,10 @@ body {
 
     .github-project-text{
         display: none;
+       
     }
   }
   
+  .github-project-text {
+  	margin-right: 25px;
+  }
