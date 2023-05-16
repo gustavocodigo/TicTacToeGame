@@ -2,7 +2,6 @@
 var currentPlayer = "player1"
 var allowUserInput = true
 
-
 const table = [
     false, false, false,
     false, false, false,
@@ -23,12 +22,16 @@ const player2 = {
 }
 
 
-
 function switchCurrentPlayer() {
+    let element = document.getElementById("cplayer-ball")
+    
     if (currentPlayer == "player1") {
         currentPlayer = "player2"
+        element.style.backgroundImage = 'url(./assets/circle.svg)'
+     
     } else {
         currentPlayer = "player1"
+        element.style.backgroundImage = 'url(./assets/close.svg)'
     }
 }
 
@@ -40,12 +43,22 @@ function clearTable() {
         elemento.classList.remove("player1")
         elemento.classList.remove("player2")
         elemento.classList.remove("win")
+        elemento.classList.remove("nowinner")
     });
 
     for (let i = 0; i < table.length; i++) {
         table[i] = false
     }
     tableCount = 0;
+}
+
+
+function setNoWinnerUi() {
+    const minhaDiv = document.getElementById("tabuleiro")
+    const elementosFilhos = minhaDiv.querySelectorAll("*");
+    elementosFilhos.forEach(elemento => {
+        elemento.classList.add("nowinner")
+    });
 }
 
 
@@ -83,7 +96,7 @@ function setOldWomanChat(message) {
 
 
 function play(element) {
-    console.log("check")
+    
     if (!allowUserInput) return;
  
     const irmaos = element.parentNode.children;
@@ -99,7 +112,7 @@ function play(element) {
         let playerWinner = combination[0]
         let sequencia =  combination[1]
         const divChildren = element.parentNode.querySelectorAll('div');
-        console.log(divChildren)
+
         for( let i = 0 ; i < sequencia.length ; i++) {
           divChildren[sequencia[i]].classList.add("win")
         } 
@@ -136,6 +149,7 @@ function play(element) {
    
     if (tableCount === table.length) {
         if ( !combination  ) {
+            setNoWinnerUi();
             setOldWomanChat("È NÂO TEMOS VENCEDORES AQUI VAMOS TENTAR DENOVO")
         }
        
@@ -149,5 +163,3 @@ function play(element) {
 
     }
 }
-
-

@@ -11,81 +11,129 @@
 </head>
 
 <body>
-    <div class="painel-players">
-        <div>
-            <div style="padding-top: 10px; display: flex">
-                <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); text-align: center;"">
-                    X
+
+    <header>
+
+
+    </header>
+
+    <main>
+        <div class="painel-players">
+            <div>
+                <div style="padding-top: 10px; display: flex">
+                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); text-align: center;"">
+                        X
+                    </div>
+                    <div style=" margin-left: 10px">UM - <b id="player1-points">0</b></div>
                 </div>
-                <div style="margin-left: 10px">UM - <b id="player1-points">0</b></div>
-            </div>
-            <div style="padding-top: 10px; display: flex">
-                <div style="width: 20px; height: 20px; background-color: rgb(0, 191, 255); text-align: center;">
-                    O
+                <div style="padding-top: 10px; display: flex">
+                    <div style="width: 20px; height: 20px; background-color: rgb(0, 191, 255); text-align: center;">
+                        O
+                    </div>
+                    <div style="margin-left: 10px">DOIS - <b id="player2-points">0</b></div>
                 </div>
-                <div style="margin-left: 10px">DOIS - <b id="player2-points">0</b></div>
             </div>
-        </div>
-        
 
-        <div style="display: flex; align-items: center; gap: 30px; ">
-            <a  style="color: white; display: flex; align-items: center" href="https://github.com/gustavocodigo/TicTacToeGame"><b class="github-project-text">GITHUB PROJECT</b>
-            <svg style="width: 80px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
-        	</a>
-        </div>
-       
-    </div>
 
-    <div style="display: flex; align-items: center; justify-content: space-around; margin-top: 40px;">
+            <div style="display: flex; align-items: center; gap: 30px; ">
+                <a class="github-project-text" style="color: white" target="_blank"
+                    href="https://github.com/gustavocodigo/TicTacToeGame"><b>GITHUB PROJECT</b></a>
+                <a target="_blank" href="https://github.com/gustavocodigo/TicTacToeGame">
+                    <svg style="width: 80px" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 480 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z" />
+                    </svg>
 
-        <div class="old-woman-element">
-            <img src="assets/grandma-removebg-preview.png" width="300px">
-            <div class="old-woman-chat" id="old-woman-chat">HAHAHHA</div>
-        </div>
-     
-        <div class="tabuleiro" id="tabuleiro">
-            <div onclick="play(this)">
-    
+                </a>
             </div>
-            <div onclick="play(this)">
-    
-            </div>
-    
-            <div onclick="play(this)">
-    
-            </div>
-    
-            <div onclick="play(this)">
-    
-            </div>
-    
-            <div onclick="play(this)">
-    
-            </div>
-    
-            <div onclick="play(this)">
-    
-            </div>
-    
-            <div onclick="play(this)">
-    
-            </div>
-    
-            <div onclick="play(this)">
-    
-            </div>
-    
-            <div onclick="play(this)">
-    
-            </div>
-    
-    
+
         </div>
 
-        
+        <div class="dsplay">
 
-    </div>
- 
+            <div class="old-woman-element">
+                <img src="assets/grandma-removebg-preview.png" width="250px">
+                <div class="old-woman-chat" id="old-woman-chat">HAHAHHA</div>
+            </div>
+
+            <div class="tabuleiro" id="tabuleiro">
+                <div onclick="play(this)">
+
+                </div>
+                <div onclick="play(this)">
+
+                </div>
+
+                <div onclick="play(this)">
+
+                </div>
+
+                <div onclick="play(this)">
+
+                </div>
+
+                <div onclick="play(this)">
+
+                </div>
+
+                <div onclick="play(this)">
+
+                </div>
+
+                <div onclick="play(this)">
+
+                </div>
+
+                <div onclick="play(this)">
+
+                </div>
+
+                <div onclick="play(this)">
+
+                </div>
+
+
+            </div>
+
+            <div class="ball" id="cplayer-ball"
+                style="display: flex; align-items: center; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                <div
+                    style="width: 150px !important; position: relative; transform: translateX(-104px); background-color: white; padding: 10px; border: 1px solid black; border-radius: 10px;">
+                    <b>CURRENT PLAYER</b>
+                </div>
+
+            </div>
+
+        </div>
+        <hr>
+
+
+        <div class="description">
+
+            <p style="max-width: 460px;">
+                Laborum ea nulla esse anim deserunt. Id esse excepteur cupidatat enim ea amet aliquip. Adipisicing esse
+                duis irure consectetur cupidatat non excepteur voluptate nulla dolor magna ullamco. Deserunt ipsum
+                deserunt nisi id sit dolore eu nisi commodo consequat. Excepteur laboris cupidatat dolore sit quis
+                labore.
+            </p>
+
+
+            <p style="max-width: 460px;">
+                Elit amet do enim minim tempor eiusmod minim dolor non ea. Duis labore sunt consectetur quis et sint.
+                Consectetur irure et ex dolor voluptate anim anim deserunt exercitation. Commodo velit est id duis irure
+                occaecat mollit velit laborum ea est. Nulla minim tempor aute labore non minim et enim commodo.
+            </p>
+
+        </div>
+
+
+
+
+
+    </main>
+
+
 </body>
 
 </html>
