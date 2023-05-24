@@ -3,13 +3,14 @@ body {
     color: rgb(0, 0, 0);
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
+  
     margin: auto;
     
 }
 
 *{
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 main {
@@ -80,7 +81,7 @@ main {
     padding: 30px;
     display: flex;
     justify-content: space-between;
-   
+   align-items: center;
 
 }
 
@@ -138,7 +139,7 @@ header {
 
 
 
-.ball {
+#cplayer-ball {
     width: 60px;
     height: 60px;
     position: fixed;
@@ -151,9 +152,23 @@ header {
     background-repeat: no-repeat;
     background-color:#8db6df;
     border-radius: 50%;
-    border: 2px solid black;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+    
 }
 
+
+#cplayer-ball div {
+   width: 100px;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    left:  -110px ;
+    padding: 10px;
+    border-radius: 10px;
+    border-right: 20px solid rgb(166, 166, 233);
+}
 
 .dsplay {
     display: flex; align-items: center; justify-content: space-around; margin-top: 40px;
