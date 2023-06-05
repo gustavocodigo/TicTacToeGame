@@ -1,10 +1,10 @@
-# TicTacToeGame
+
+# Jogo da velha html css js
+é uma aplicação de jogo educacional para batalhas entre colegas e afim
+o projeto tem como objetivo fornecer o jogo da velha online e acessivel
+O projeto é responsivel e tem suporte a dois jogadores localmente
+
+voce pode clonar o repositorio e testar na sua máquina localmente ou usar o link abaixo:
+
 https://gustavocodigo.github.io/TicTacToeGame/
-<br>
-Jogo da velha html css js
-
-![image](https://github.com/gustavocodigo/TicTacToeGame/assets/108258194/91de84da-99f5-4842-b5eb-707599416dc5) ![image](https://github.com/gustavocodigo/TicTacToeGame/assets/108258194/ebb14e6f-ad3b-4198-b468-4dfecd26d9b0)
-
-
-
 
